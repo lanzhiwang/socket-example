@@ -23,6 +23,11 @@ def main(argv):
     if len(argv) < 3:
         binary = argv[0]
         print "Usage:\n  %s -l port\n  %s host port" % (argv[0], argv[0])
+        """
+        Usage:
+            02_chargen.py -l port
+            02_chargen.py host port
+        """
         return
     port = int(argv[2])
     if argv[1] == "-l":
@@ -41,4 +46,12 @@ def main(argv):
 
 
 if __name__ == "__main__":
+    # print sys.argv
+    """
+    $ python 02_chargen.py -l port
+    ['02_chargen.py', '-l', 'port']
+     
+    $ python 02_chargen.py host port
+    ['02_chargen.py', 'host', 'port']
+    """
     main(sys.argv)
